@@ -1,0 +1,40 @@
+CREATE TABLE `pilot_db` (
+  `pilot_ID` int(11) NOT NULL,
+  `First_Name` varchar(45) DEFAULT NULL,
+  `Last_Name` varchar(45) DEFAULT NULL,
+  `Airplane_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pilot_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
+
+CREATE TABLE `stationed_db` (
+  `stationed_ID` int(11) NOT NULL,
+  `airplane_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`stationed_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
+
+CREATE TABLE `passenger_db` (
+  `passenger_ID` int(11) NOT NULL,
+  `First_Name` varchar(45) DEFAULT NULL,
+  `Last_Name` varchar(45) DEFAULT NULL,
+  `flight_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`passenger_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
+
+CREATE TABLE `flight_db` (
+  `flight_ID` int(11) NOT NULL,
+  `airplane_ID` int(11) DEFAULT NULL,
+  `destination` varchar(45) DEFAULT NULL,
+  `depart_time` datetime DEFAULT NULL,
+  `arrive_time` datetime DEFAULT NULL,
+  `gate` varchar(45) DEFAULT NULL,
+  `connections` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`flight_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
+
+CREATE TABLE `airplane_db` (
+  `airplane_ID` int(11) NOT NULL,
+  `model` varchar(45) DEFAULT NULL,
+  `company` varchar(45) DEFAULT NULL,
+  `capacity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`airplane_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
