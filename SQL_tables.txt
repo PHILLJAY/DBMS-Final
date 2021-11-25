@@ -1,5 +1,5 @@
 CREATE TABLE `pilot_db` (
-  `pilot_ID` int(11) NOT NULL,
+  `pilot_ID` int(11) NOT NULL AUTO_INCREMENT,
   `First_Name` varchar(45) DEFAULT NULL,
   `Last_Name` varchar(45) DEFAULT NULL,
   `Airplane_ID` int(11) DEFAULT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE `pilot_db` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 
 CREATE TABLE `stationed_db` (
-  `stationed_ID` int(11) NOT NULL,
+  `stationed_ID` int(11) NOT NULL AUTO_INCREMENT,
   `airplane_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`stationed_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
@@ -22,7 +22,7 @@ CREATE TABLE `sys`.`passenger_db` (
   PRIMARY KEY (`passenger_ID`));
 
 CREATE TABLE `flight_db` (
-  `flight_ID` int(11) NOT NULL,
+  `flight_ID` int(11) NOT NULL AUTO_INCREMENT,
   `airplane_ID` int(11) DEFAULT NULL,
   `destination` varchar(45) DEFAULT NULL,
   `depart_time` datetime DEFAULT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE `flight_db` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 
 CREATE TABLE `airplane_db` (
-  `airplane_ID` int(11) NOT NULL,
+  `airplane_ID` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(45) DEFAULT NULL,
   `company` varchar(45) DEFAULT NULL,
   `capacity` int(11) DEFAULT NULL,
