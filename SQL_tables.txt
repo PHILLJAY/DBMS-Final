@@ -12,13 +12,14 @@ CREATE TABLE `stationed_db` (
   PRIMARY KEY (`stationed_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 
-CREATE TABLE `passenger_db` (
-  `passenger_ID` int(11) NOT NULL,
-  `First_Name` varchar(45) DEFAULT NULL,
-  `Last_Name` varchar(45) DEFAULT NULL,
-  `flight_ID` int(11) DEFAULT NULL,
-  PRIMARY KEY (`passenger_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8
+CREATE TABLE `sys`.`passenger_db` (
+  `passenger_ID` INT NOT NULL AUTO_INCREMENT,
+  `First_Name` VARCHAR(45) NULL,
+  `Last_Name` VARCHAR(45) NULL,
+  `Airplane_ID` INT NULL,
+  `Password` VARCHAR(45) NULL,
+  `Admin` VARCHAR(6) NULL,
+  PRIMARY KEY (`passenger_ID`));
 
 CREATE TABLE `flight_db` (
   `flight_ID` int(11) NOT NULL,
