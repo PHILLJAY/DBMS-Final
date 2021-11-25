@@ -16,7 +16,7 @@ CREATE TABLE `sys`.`passenger_db` (
   `passenger_ID` INT NOT NULL AUTO_INCREMENT,
   `First_Name` VARCHAR(45) NULL,
   `Last_Name` VARCHAR(45) NULL,
-  `Airplane_ID` INT NULL,
+  `flight_ID` INT NULL,
   `Password` VARCHAR(45) NULL,
   `Admin` VARCHAR(6) NULL,
   PRIMARY KEY (`passenger_ID`));
