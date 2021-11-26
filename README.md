@@ -10,7 +10,7 @@
 
 ![picture alt](https://c0.wallpaperflare.com/preview/609/547/661/departure-board.jpg)
 
-Instalation:
+Installation:
 1. Download project to your local www directory
 2. Change mysql connection to your local schema
 3. Add the 5 tables using the table queries provided
