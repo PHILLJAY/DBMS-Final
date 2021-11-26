@@ -6,9 +6,18 @@
     <link rel="stylesheet" href="Styles/styleNB.css"/>
 </head>
 <body>
+<<<<<<< Updated upstream
     <div class="content">
     <h1 class="login-title"><div id="Ctime"></div></h1>
     <h1 class="login-title">Vancouver Current Departures</h1>
+=======
+    <div id="Ctime"></div>
+    <p>Vancouver Current Departures</p>
+    
+<form action="http://localhost/DBMS-Final/GPpassenger.php">
+    <input type="submit" value="View Passenger Page"/>
+</form>
+>>>>>>> Stashed changes
 
     <script>
         var today = new Date();
@@ -25,13 +34,15 @@
         </tr>
 
 <?php
-    $con = mysqli_connect("localhost","root","","sys"); //sys = schema name "miniairways"
+    $con = mysqli_connect("localhost","root","","greenport"); //sys = schema name "miniairways"
    
     if (mysqli_connect_errno()){
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
     
     session_start();
+    $fname = $_SESSION['FirstName']; //change to current passenger
+    $lname = $_SESSION['LastName'];
 
     $sql1 = "SELECT * FROM flight_db";
         $result1 = $con->query($sql1);

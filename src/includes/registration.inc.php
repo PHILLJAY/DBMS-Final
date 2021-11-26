@@ -7,7 +7,11 @@ if (isset($_POST["submit"])){
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
+<<<<<<< Updated upstream
     $db = getdb();
+=======
+
+>>>>>>> Stashed changes
     //Form validation functions (see functions.inc.php)
     if(emptyInputSignup($username,$email, $password_1) !== false){
         header("location: ../../registration.php?error=emptyinput");
