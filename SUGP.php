@@ -39,7 +39,7 @@
                   </div>";
         } else {
             $query = "INSERT into `passenger_db` (First_Name, Last_Name, Password)
-                      VALUES ('$FirstName','$LastName', '" . md5($Password) . "')";
+                      VALUES ('$FirstName','$LastName', '$Password')";
             mysqli_query($con, $query);
             echo "<div class='form'>
             <h3>You have registered successfully.</h3><br/>

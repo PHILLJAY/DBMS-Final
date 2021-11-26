@@ -198,14 +198,14 @@
         function view8() {
         document.getElementById("display").innerHTML = "<?php 
 
-            $fname = 'Todd';//change to current admin/pilot
+            $current_user = $_SESSION['FirstName'];
 
             $sql3 = "SELECT model
                     FROM airplane_db
                     WHERE airplane_db.airplane_ID = 
                         (SELECT pilot_db.airplane_ID
                         FROM pilot_db 
-                        WHERE pilot_db.First_Name = '$fname');";
+                        WHERE pilot_db.First_Name = '$current_user');";
 ;
             $result3 = $con->query($sql3);
 

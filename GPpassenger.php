@@ -31,7 +31,7 @@
     }
     
     session_start();
-    $fname = 'Konrad'; //change to current passenger
+    $current_user = $_SESSION['FirstName'];
 
     $sql1 = "SELECT * FROM flight_db";
         $result1 = $con->query($sql1);
@@ -68,7 +68,7 @@
                         WHERE flight_ID =
                             (SELECT passenger_db.flight_ID
                             FROM passenger_db
-                            WHERE passenger_db.First_Name = '$fname'));";             
+                            WHERE passenger_db.First_Name = '$current_user'));";             
             $result2 = $con->query($sql2);
 
             echo "<table>";
@@ -96,7 +96,7 @@
                     WHERE flight_db.flight_ID =
                         (SELECT passenger_db.flight_ID 
                         FROM passenger_db
-                        WHERE passenger_db.First_Name = '$fname');;";             
+                        WHERE passenger_db.First_Name = '$current_user');;";             
             $result2 = $con->query($sql2);
 
             echo "<table>";
