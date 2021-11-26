@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8"/>
     <title>GreenPortHomePassenger</title>
-    
+    <link rel="stylesheet" href="Styles/styleNB.css"/>
 </head>
 <body>
-    <div id="Ctime"></div>
-    <p>Vancouver Current Departures</p>
+    <div class="content">
+    <h1 class="login-title"><div id="Ctime"></div></h1>
+    <h1 class="login-title">Vancouver Current Departures</h1>
 
     <script>
         var today = new Date();
@@ -50,9 +51,10 @@
             }
 ?>
     </table>
+    <br>
 
-    <button onclick="case1()">View your pilots name! </button>
-    <button onclick="view10()">View your depart/arrive time! </button>
+    <button onclick="case1()" class="login-button" >View your pilots name! </button>
+    <button onclick="view10()" class="login-button">View your depart/arrive time! </button>
 
     <p id="display"></p>
 
@@ -120,7 +122,7 @@
         }
 
     </script>
-
+    </div>
     </body>
 
 </html>

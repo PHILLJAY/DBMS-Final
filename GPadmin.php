@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8"/>
     <title>GreenPortHomeAdmin</title>
-    
+    <link rel="stylesheet" href="Styles/styleNB.css"/>
 </head>
 <body>
-    <div id="Ctime"></div>
-    <p>Vancouver Current Departures</p>
+    <div class="content">
+    <h1 class="login-title"><div id="Ctime"></div></h1>
+    <h1 class="login-title">Vancouver Current Departures</h1>
 
     <script>
         var today = new Date();
@@ -51,13 +52,15 @@
 ?>
     </table>
 
-    <button onclick="view1()">View all passenger pilots</button>
-    <button onclick="view2()">Passengers whose flight's are currently grounded</button>
-    <button onclick="view3()">Find all aircraft with an under average amount of passengers </button>
-    <button onclick="view6()">View number of airplanes owned by companies</button>
-    <button onclick="view7()">View Number of Stationed Airplanes</button>
-    <button onclick="view8()">View airplane model for current flight </button>
-    <button onclick="view9()">Find amount of passengers on all flights </button>
+    <br>
+
+    <button onclick="view1()"class="login-button">View all passenger pilots</button>
+    <button onclick="view2()"class="login-button">Passengers whose flight's are currently grounded</button>
+    <button onclick="view3()"class="login-button">Find all aircraft with an under average amount of passengers </button>
+    <button onclick="view6()"class="login-button">View number of airplanes owned by companies</button>
+    <button onclick="view7()"class="login-button">View Number of Stationed Airplanes</button>
+    <button onclick="view8()"class="login-button">View airplane model for current flight </button>
+    <button onclick="view9()"class="login-button">Find amount of passengers on all flights </button>
 
     <p id="display"></p>
     
@@ -182,7 +185,7 @@
                     FROM stationed_db;";
 
             $result3 = $con->query($sql3);
-
+            echo "<table>";
             if ($result3->num_rows > 0) {
                 for($y = 0; $y < $result3->num_rows; $y++){
 
@@ -192,6 +195,7 @@
                         echo "</tr>";
                     }
             }
+            echo "</table>";
             ?>";
         }
 
@@ -249,7 +253,7 @@
             }
 
     </script>
-    
+    </div>
 </body>
 
 </html>

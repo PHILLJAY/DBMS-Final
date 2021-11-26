@@ -3,8 +3,9 @@ CREATE TABLE `pilot_db` (
   `First_Name` varchar(45) DEFAULT NULL,
   `Last_Name` varchar(45) DEFAULT NULL,
   `Airplane_ID` int(11) DEFAULT NULL,
+  `Password` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`pilot_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8
 
 CREATE TABLE `stationed_db` (
   `stationed_ID` int(11) NOT NULL AUTO_INCREMENT,

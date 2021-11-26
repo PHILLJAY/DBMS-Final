@@ -30,15 +30,15 @@
 
         if ($rows == 1) {
             $_SESSION['FirstName'] = $FirstName;
-
-            $AdminQuery = "SELECT * FROM `passenger_db` WHERE Admin != 'null' AND First_Name = '$FirstName'";
+            header("Location: GPpassenger.php");
+        }else if($rows != 1){
+            $_SESSION['FirstName'] = $FirstName;
+            $AdminQuery = "SELECT * FROM `pilot_db` WHERE First_Name = '$FirstName'AND Password ='$Password'";
             $result2 = mysqli_query($con, $AdminQuery);
             $rows2 = mysqli_num_rows($result2);
 
             if($rows2 == 1){
                 header("Location: GPadmin.php");
-            }else{
-            header("Location: GPpassenger.php");
             }
         } else {
             echo "<div class='form'>
