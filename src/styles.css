@@ -1,6 +1,6 @@
 .gradient-custom {
     /* fallback for old browsers */
-    background: rgb(23,177,105);
+    background: rgb(0, 179, 202);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(0deg, rgba(23,177,105,1) 0%, rgba(218,221,152,1) 100%);
+    background-image: linear-gradient(to right, #00b09b, #96c93d);
   }
