@@ -9,6 +9,10 @@
     <div id="Ctime"></div>
     <p>Vancouver Current Departures</p>
 
+<form action="http://localhost/DBMS-Final/GPadmin.php">
+    <input type="submit" value="View Admin Page"/>
+</form>
+
     <script>
         var today = new Date();
         var date = 'Current time: ' + today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+' '+today.getHours() + ":" + today.getMinutes();
@@ -24,14 +28,15 @@
         </tr>
 
 <?php
-    $con = mysqli_connect("localhost","root","","sys"); //sys = schema name "miniairways"
+    $con = mysqli_connect("localhost","root","","greenport"); //sys = schema name "miniairways"
 
     if (mysqli_connect_errno()){
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
     
     session_start();
-    $fname = 'Konrad'; //change to current passenger
+    $fname = $_SESSION['FirstName']; //change to current passenger
+    $lname = $_SESSION['LastName'];
 
     $sql1 = "SELECT * FROM flight_db";
         $result1 = $con->query($sql1);
@@ -41,13 +46,22 @@
 
                     $row = $result1->fetch_assoc();
                         echo "<tr>";
-                        echo "<td>".$row["flight_ID"] ."</td>";
+                        echo "<td id = \"$y\">".$row["flight_ID"] ."</td>";
                         echo "<td>".$row["destination"] ."</td>";
                         echo "<td>".$row["depart_time"] ."</td>";
                         echo "<td>".$row["gate"] ."</td>";
+                        echo "<td><form action = \"GPpassenger.php\" method=\"POST\"><input type = \"hidden\" name = \"registration\" value = ".$row["flight_ID"]."> <input type=\"submit\" name = \"button\" value = \"Book Flight\"></form>";
                         echo "</tr>";
                     }
             }
+
+        if (isset($_POST['button'])){
+            $id = $_POST['registration'];
+            $sql =  "INSERT INTO `passenger_db`(`First_Name`, `Last_Name`, `flight_ID`) VALUES ('$fname', '$lname' , $id)";
+            mysqli_query($con, $sql);
+            unset($_POST['button']);
+            header("location: GPpassenger.php");
+        }   
 ?>
     </table>
 
@@ -57,7 +71,12 @@
     <p id="display"></p>
 
     <script>
+        function register(x) {
+            var row = document.getElementById(x).innerHTML;
 
+            
+
+        }
         function case1() {
         document.getElementById("display").innerHTML = "<?php
             $sql2 = "SELECT pilot_db.First_Name

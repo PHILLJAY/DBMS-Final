@@ -1,0 +1,139 @@
+body {
+    background-color: #2f9953;
+}
+.content {
+    max-width: 500px;
+    margin: auto;
+  }
+table, th, td{
+    background-color:#54494B;
+    color:#E3D081;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.form {
+    margin: auto;
+    width: 500px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background-color: #54494B;
+    border: #2f9953;
+    border-radius: 25px;
+}
+.login-input {
+    font-size: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 25px;
+    height: 25px;
+    width: calc(80% - 23px);
+    align-items: center;
+}
+.login-button {
+    color: rgb(0, 0, 0);
+    background: #E3D081;
+    border: 0;
+    outline: 0;
+    width: 80%;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.form input{
+    margin-left: 10%;
+}
+h1{
+    font-family: 'Cantarell', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    color: #E3D081;
+    margin: 0px auto 25px;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+.center a {
+    margin-bottom: 15px;
+    float: left;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: none;
+    color: black;
+}
+h3 {
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Cantarell', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    color: #2f9953;
+}
+#checkout{
+    float:right;
+    background-color: #2f9953;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: 75px;
+    margin-top: 0px;
+    padding: 30px;
+    width: 250px;
+    height: 720px;
+    text-align: center;
+    box-shadow: 4px 4px 10px black;
+}
+.c-button {
+    color: #2f9953;
+    background:#54494B;
+    border: 0;
+    outline: 0;
+    width: 80%;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+#t{
+    text-align: left;
+    font-size: 20px;
+}
+#longcard {
+    background-color: #2f9953;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    width: 1950px;
+    float:left;
+    box-shadow: 4px 4px 10px black;
+  }
+  .price {
+    font-size: 40px;
+    font-style: italic;
+    padding-right: 50px;
+    float:right;
+  }
+  .name {
+    font-size: 40px;
+    font-style: italic;
+    padding-right: 800px;
+    float:right;
+  }
+  #viewprice {
+    font-size: 60px;
+    font-style: italic;
+    padding-right: 25px;
+    float:right;
+  }
+  #viewname {
+    font-size: 60px;
+    font-style: italic;
+    padding-left: 25px;
+    float:left;
+  }
+#viewdesc {
+    font-size: 40px;
+    font-style: italic;
+    padding-top: 150px;
+    text-indent: 50px;
+}   

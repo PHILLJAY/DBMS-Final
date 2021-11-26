@@ -1,7 +1,8 @@
 <?php
 
-function emptyInputSignup($username,$email, $password_1, $password_2){
+function emptyInputSignup($username,$email, $password_1){
     $result = false;
+    
     if(empty($username)||empty($email)||empty($password_1)){
        $result= true; 
     } else {
@@ -13,7 +14,7 @@ function emptyInputSignup($username,$email, $password_1, $password_2){
 
 function invalidUsername($username){
     $result = false;
-    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)){
+    if (!preg_match("/^[a-zA-Z0-9~@.]*$/", $username)){
        $result= true; 
     } else {
         $result= false;
@@ -65,8 +66,8 @@ function userExists($db,$username,$email){
     }
     mysqli_stmt_close($stmt);
 }
-function createUser($db,$username, $email, $password_1){
-    $sql = "INSERT INTO users (Username, Password, EmailAddress) VALUES (?,?,?);";
+function createUser($db,$username, $password_1){
+    $sql = "INSERT INTO users (Username, Password) VALUES (?,?);";
     $stmt = mysqli_stmt_init($db);
     if (!mysqli_stmt_prepare($stmt, $sql)){
        header("location: ../../registration.php?error=stmtfailed");
@@ -75,7 +76,7 @@ function createUser($db,$username, $email, $password_1){
 
     $hashedPass = md5($password_1);
     
-    mysqli_stmt_bind_param($stmt, "sss",$username,$hashedPass,$email);
+    mysqli_stmt_bind_param($stmt, "sss",$username,$hashedPass);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../../registration.php?error=none");

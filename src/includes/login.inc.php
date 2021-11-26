@@ -6,8 +6,8 @@ if (isset($_POST["submit"])){
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
     if(emptyInputLogin($username, $pass) !== false){
-        //header("location: ../../login.php?error=emptyinput");
-        //exit();
+        header("location: ../../login.html?error=emptyinput");
+        exit();
         var_dump($_POST);
     }
 
@@ -15,7 +15,9 @@ if (isset($_POST["submit"])){
     loginUser($db, $username, $pass);
 
 }else{
-    header("location: ../../login.php");
+    var_dump($_POST);
+    header("location: ../../login.html");
+    
     exit();
 }
 

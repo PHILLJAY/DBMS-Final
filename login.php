@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -54,7 +54,7 @@
                     </div>
         
                     <div>
-                      <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
+                      <p class="mb-0">Don't have an account? <a href="Registration.php" class="text-white-50 fw-bold">Sign Up</a></p>
                     </div>
         
                   </div>
