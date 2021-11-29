@@ -11,8 +11,8 @@
 ![picture alt](https://c0.wallpaperflare.com/preview/609/547/661/departure-board.jpg)
 
 Installation:
-1. Download project to your local www directory
-2. Change mysql connection to your local schema
-3. Add the 5 tables using the table queries provided
-4. Import sample data from the csv files to the respected tables
-5. Access website through localhost/SIGP.php
+1. Download project files from GitHub repository to your local www directory.
+2. Utilize your favourite SQL database tool to create the tables on your system using the [queries](https://github.com/PHILLJAY/DBMS-Final/blob/main/SQL_tables.txt) provided. 
+3. Configure mysql connection to your local schema name.
+4. Import the [sample data](https://github.com/PHILLJAY/DBMS-Final/tree/main/sample_data) to the respective tables.
+5. You may now run your server software of choice (WAMP), and can now access the MiniAirways website through your localhost. 
